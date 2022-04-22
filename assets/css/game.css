@@ -1,3 +1,14 @@
+/* animations */
+@keyframes fadeIn {
+    0% { opacity: 1; }
+    20% { opacity: 1;}
+    40% { opacity: 0.8;}
+    60% { opacity: 0.6;}
+    80% { opacity: 0.4;}
+    100% { opacity: 0; 
+    }
+}
+/* memorize modal warning */
 #memorizeModal{
     position: absolute;
     top: 0;
@@ -17,6 +28,7 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 20%;
 }
+/* container of cards */
 #container{
     position: relative;
     left: -20%;
@@ -38,19 +50,43 @@
     transition: all 1s;
     backface-visibility: hidden;
 }
+/* back face */
 .back{
     background: url("../img/background.svg");
 }
+/* flipped back face */
 .back.flipped{
     transform: rotateY(180deg);
 }
+/* front face */
 .front{
     transform: rotateY(-180deg);
 }
+/* flipped front face */
 .front.flipped{
     transform: rotateY(0deg);
 }
+/* hover of cards when passing the mouse by */
 .card:hover{
     box-shadow: 0 0 10px rgb(28, 218, 176);
+}
+/* check symbol for matches */
+#imgMatchSign{
+    width: 100px;
+    height: 100px;
+    margin-left: 50%;
+    position: relative;
+    top: 250px;
+    transition-property: top, opacity;
+    transition-duration: 1.0s;
+    opacity: 1;
+    z-index: -1;
+}
+/* effect to hide pair of a match */
+.pair{
+    animation-name: fadeIn;
+    animation-delay: 500ms;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
 }
 
