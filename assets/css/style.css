@@ -10,34 +10,33 @@
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    background: rgb(69, 153, 80);
+    background: darkcyan;
     text-align: center;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
 }
+/* MEMORY GAME */
 .title{
     font-family: "ZCOOL KuaiLe";
     font-size: 8vw;
     width: 100%;
-    -webkit-text-fill-color:rgba(223, 14, 14);
-    -webkit-text-stroke-color: #000000;
+    -webkit-text-fill-color: #551A8B;
+    -webkit-text-stroke-color: #551A8B;
     -webkit-text-stroke-width: 1px;
     letter-spacing: -0.015em;
     line-height: 3.5rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 10vh;
 }
-  
+/* Fractions */
 .subtitle{
     font-family: "ZCOOL KuaiLe";
     font-size: 5vw;
     line-height: 2rem;
     font-weight: 700;
     -webkit-text-fill-color: #FEB72B;
-    -webkit-text-stroke-color: gray;
-    -webkit-text-stroke-width: 1px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .space-1{
@@ -45,5 +44,21 @@
 }
 .space-2{
     height: 7vh;
+}
+.btn{
+    font-family: "ZCOOL KuaiLe";
+    font-size: 5vw;
+    display: inline-block;
+    text-decoration: none;
+    background-color: #FEB72B;
+    border: 0;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5em;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
+}
+#play{
+    font-family: "ZCOOL KuaiLe";
+    display: inline-block;
+    text-decoration: none;
 }
 
