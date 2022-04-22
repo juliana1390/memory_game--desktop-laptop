@@ -22,7 +22,17 @@
                 card.style.top = 450 + "px";
             }
 
+            card.addEventListener("click", flipCard, false);
+
         }
     }
+    /* ---------------------------------- FLIPPING cards ---------------------------------- */
+    function flipCard(){
+        var faces = this.getElementsByClassName("face");
+
+        faces[0].classList.toggle("flipped");
+        faces[1].classList.toggle("flipped");
+    }
+
 
 }());

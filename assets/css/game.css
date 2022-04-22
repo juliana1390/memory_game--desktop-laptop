@@ -16,7 +16,6 @@
     -webkit-text-stroke-width: 0.5px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 20%;
-
 }
 #container{
     position: relative;
@@ -42,3 +41,17 @@
 .back{
     background: url("../img/background.svg");
 }
+.back.flipped{
+    transform: rotateY(180deg);
+}
+.front{
+    background: url("../img/0.svg");
+    transform: rotateY(-180deg);
+}
+.front.flipped{
+    transform: rotateY(0deg);
+}
+.card:hover{
+    box-shadow: 0 0 10px rgb(28, 218, 176);
+}
+
