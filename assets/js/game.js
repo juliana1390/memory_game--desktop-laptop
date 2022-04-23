@@ -20,7 +20,7 @@
        
     startGame();
     
-    /* -------------------------------- STARTING the game -------------------------------- */
+    /* --------------------------------- STARTING the game --------------------------------- */
     function startGame(){
 
         images = randomSort(images);
@@ -65,11 +65,7 @@
         memorizeModal.style.zIndex = -2;
         memorizeModal.removeEventListener("click", startGame,false);
     }
-    /* ------------------------------ randomly SORTING cards ------------------------------ */
-    // /**
-    //  * @param {*} images array with organized images
-    //  * @returns sorted - array with imagens in random positions
-    //  */
+    /* ------------------------------ randomly SORTING cards ------------------------------- */
     function randomSort(images){
         
         var sorted = [];
@@ -172,7 +168,5 @@
     function victory(){
         window.location.replace("victory.html");
     }
-
-
 
 }());
