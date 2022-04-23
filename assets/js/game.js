@@ -18,7 +18,7 @@
         images.push(img);
     }
        
-    startGame();
+    startGame();   
     
     /* --------------------------------- STARTING the game --------------------------------- */
     function startGame(){
@@ -60,10 +60,9 @@
             frontFaces[i].setAttribute("id", images[i].id);
 
         }
-        
-        // hiding memorizeModal 
+
         memorizeModal.style.zIndex = -2;
-        memorizeModal.removeEventListener("click", startGame,false);
+        
     }
     /* ------------------------------ randomly SORTING cards ------------------------------- */
     function randomSort(images){
@@ -79,6 +78,26 @@
         }
 
         return sorted;
+    }
+    /* ------------------------------------ SHOWING cards ------------------------------------ */
+    
+    window.setTimeout(function(){
+        showCards();
+    },3500);
+
+    function showCards(){
+      
+        var faces =  document.getElementsByClassName("face");
+        
+        for(i = 0; i < 32; i++){
+            faces[i].classList.toggle("flipped");
+        }
+            
+        setTimeout(function (){
+            for(i = 0; i < 32; i++){
+                faces[i].classList.toggle("flipped");
+            }
+        }, 7000);
     }
     /* ---------------------------------- FLIPPING cards ---------------------------------- */
     function flipCard(){
@@ -122,7 +141,7 @@
                     flippedCards[1].childNodes[3].classList.add("pair");
 
                     removeHover()
-                    
+
                     matches++;
 
                     // array is now empty again
@@ -174,13 +193,12 @@
     }
     /* ----------------------------------- warning Modal ----------------------------------- */
     window.setTimeout(function(){
-        memorize();
-    },200)
-
-    function memorize(){
         memorizeModal.style.zIndex = 10;
-        memorizeModal.addEventListener("click", startGame,false);
-    }
+    },100);
+
+    window.setTimeout(function(){
+        memorizeModal.style.zIndex = -2;
+    },3000);
     /* --------------------------------- call VICTORY page --------------------------------- */
     function victory(){
         window.location.replace("victory.html");
