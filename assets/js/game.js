@@ -121,6 +121,8 @@
                     flippedCards[1].childNodes[1].classList.add("pair");
                     flippedCards[1].childNodes[3].classList.add("pair");
 
+                    removeHover()
+                    
                     matches++;
 
                     // array is now empty again
@@ -154,6 +156,21 @@
             imgMatchSign.style.top = 250 + "px";
             imgMatchSign.style.opacity = 1;
             },1000);
+    }
+    /* ------------------------- Remove the shine effect from pair ------------------------- */
+    function removeHover(){
+        let info = [];
+        for(i = 0; i < 16; i++){
+           info[i] = document.getElementById("card" + i); // taking the cards
+        }
+        for(i = 0; i < info.length; i++){
+            info[i] = info[i].childNodes[3]; // turning into "front face"
+            if(info[i].id === flippedCards[0].childNodes[3].id){
+                info[i].parentNode.style.boxShadow = "none"; // removing hover
+            }
+        }
+        console.log(info);
+        info = [];
     }
     /* ----------------------------------- warning Modal ----------------------------------- */
     window.setTimeout(function(){
