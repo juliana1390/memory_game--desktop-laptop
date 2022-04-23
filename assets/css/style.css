@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
 }
-
+/* ------------------------------------- GENERAL ------------------------------------- */
 .background{
     display: flex;
     overflow: hidden;
@@ -16,28 +16,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     flex-grow: 1;
-}
-/* MEMORY GAME */
-.title{
-    font-family: "ZCOOL KuaiLe";
-    font-size: 8vw;
-    width: 100%;
-    -webkit-text-fill-color: #551A8B;
-    -webkit-text-stroke-color: #551A8B;
-    -webkit-text-stroke-width: 1px;
-    letter-spacing: -0.015em;
-    line-height: 3.5rem;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-top: 10vh;
-}
-/* Fractions */
-.subtitle{
-    font-family: "ZCOOL KuaiLe";
-    font-size: 5vw;
-    line-height: 2rem;
-    font-weight: 700;
-    -webkit-text-fill-color: #FEB72B;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .space-1{
     height: 1vh;
@@ -56,11 +34,48 @@
     border-radius: 0.5em;
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.25);
 }
+/* ------------------------------------- INDEX PAGE ------------------------------------- */
+/* MEMORY GAME */
+.title{
+    font-family: "ZCOOL KuaiLe";
+    font-size: 6vw;
+    width: 100%;
+    -webkit-text-fill-color: #551A8B;
+    -webkit-text-stroke-color: #551A8B;
+    -webkit-text-stroke-width: 1px;
+    letter-spacing: -0.015em;
+    line-height: 3.5rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: -50vh;
+    margin-left: 5%;
+}
+/* Fractions */
+.subtitle{
+    font-family: "ZCOOL KuaiLe";
+    font-size: 4vw;
+    line-height: 2rem;
+    font-weight: 700;
+    -webkit-text-fill-color: #FEB72B;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-left: 5%;
+}
 #play{
     font-family: "ZCOOL KuaiLe";
     display: inline-block;
     text-decoration: none;
 }
+#btn-play{
+    margin-top: 0;
+    margin-left: 5%;
+}
+#math{
+    width: 30vw;
+    height: auto;
+    transform: rotate(-30deg);
+    margin-top: 10vh;
+    margin-left: -70%;
+}
+/* ------------------------------------- VICTORY PAGE ------------------------------------- */
 #back{
     font-family: "ZCOOL KuaiLe";
     display: inline-block;
@@ -71,7 +86,7 @@
     font-size: 5vw;
     width: 100%;
     -webkit-text-fill-color:yellowgreen;
-    -webkit-text-stroke-color: darkblue;
+    -webkit-text-stroke-color: yellowgreen;
     -webkit-text-stroke-width: 1px;
     letter-spacing: -0.015em;
     line-height: 3.5rem;
