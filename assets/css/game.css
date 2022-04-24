@@ -26,7 +26,7 @@
     -webkit-text-stroke-color: rgba(223, 14, 14);
     -webkit-text-stroke-width: 0.5px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 1);
-    margin-top: 20%;
+    margin-top: 10%;
 }
 /* container of cards */
 #container{
@@ -88,5 +88,31 @@
     animation-delay: 500ms;
     animation-duration: 500ms;
     animation-fill-mode: forwards;
+}
+/* score box */
+#box-points{
+    position: absolute;
+    right: 10%;
+    top: 40%;
+    border: 5px solid yellowgreen;
+    border-radius: 10px;
+    width: 150px;
+    height: 100px;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.6);
+}
+/* points number */
+#points{
+    font-family: "ZCOOL KuaiLe";
+    font-size: 3vw;
+    font-weight: 700;
+    padding: 5%;
+    color: yellowgreen;
+}
+/* score title */
+#scr{
+    padding: 5%;
+    font-family: "ZCOOL KuaiLe";
+    font-size: 2vw;
+    color: yellowgreen;
 }
 

@@ -6,6 +6,8 @@
 
     var matches = 0;
 
+    var fail = 0;
+
     var imgMatchSign = document.querySelector("#imgMatchSign");
 
     // pushing images to array "images"
@@ -28,6 +30,8 @@
         flippedCards = [];
 
         matches = 0;
+
+        fail = 0;
 
         var frontFaces = document.getElementsByClassName("front");
         var backFaces = document.getElementsByClassName("back");
@@ -97,7 +101,7 @@
             for(i = 0; i < 32; i++){
                 faces[i].classList.toggle("flipped");
             }
-        }, 10000);
+        },10000);
     }
     /* ---------------------------------- FLIPPING cards ---------------------------------- */
     function flipCard(){
@@ -147,6 +151,8 @@
                     // array is now empty again
                     flippedCards = [];
 
+                    getMatches();
+
                     // it call's the victory's page when 8 matches are made
                     if(matches === 8){
                         victory();
@@ -163,18 +169,43 @@
 
             // emptying array
             flippedCards = [];
+            
+            fail++;
+            getFails(fail);
         }        
+    }
+    /* ---------------------------------- COUNT POINTS ---------------------------------- */
+    /** Function for counting the points
+        * @param {number} fail
+        * receive the number of fails
+        * final score = 50 - (fails*2)
+        * Never under 50
+        */
+    function getFails(){        
+        var ptsant = document.getElementById("points").textContent;
+        ptsant = parseInt(ptsant);
+
+        if(ptsant > 50){
+            pts = ptsant - 1; // - 1 point per fail
+            document.getElementById("points").innerHTML =  pts;
+        }
+    }
+    function getMatches(){        
+        var ptsant = document.getElementById("points").textContent;
+        ptsant = parseInt(ptsant);
+        pts = ptsant + 6; // more 6 points per match
+        document.getElementById("points").innerHTML =  pts;
     }
     /* ------------------------------------ MATCH check ------------------------------------ */
     function matchCardSign(){
-        imgMatchSign.style.zIndex = 1;
+        imgMatchSign.style.zIndex = 1;        
         imgMatchSign.style.top = 150 + "px";
         imgMatchSign.style.opacity = 0;
         setTimeout(function(){
             imgMatchSign.style.zIndex = -1;
             imgMatchSign.style.top = 250 + "px";
             imgMatchSign.style.opacity = 1;
-            },1000);
+        },2000);
     }
     /* ------------------------- Remove the shine effect from pair ------------------------- */
     function removeHover(){
@@ -202,6 +233,9 @@
     /* --------------------------------- call VICTORY page --------------------------------- */
     function victory(){
         window.location.replace("victory.html");
+        
+        // attempt of pushing points to victory page
+        // var points = document.querySelector("#points").value;
+        // localStorage.setItem("points", points);
     }
-
 }());

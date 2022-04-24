@@ -5,26 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/game.css">
     
     <title>Victory</title>
 
 </head>
-<body class="background">
-    
+
     <h1 id="congrats">CONGRATULATIONS!!!</h1>
 
     <div class="space-2"></div>
-    <div class="space-2"></div>
+
+<body class="background">
     
-    <img src="/assets/img/trophy.svg">
+    <audio src="/assets/sound/victory-sound.wav" autoplay no-repeat></audio>   
+    
+    <!------------------------------------ score display ------------------------------------->
+    
+    <div>
+        <div id="box-pts">
+            <p class="points_vic"></p>
+        </div>
+    </div>
+
+    <!------------------------------------- trophy image -------------------------------------->
+    
+    <img id="trophy" src="/assets/img/trophy.svg">
 
     <div class="space-2"></div>
     
+    <!------------------------------------ return to index ------------------------------------->
     <div class="btn">
         <a href="index.html">
             <p id="back">BACK</p>
         </a>
     </div>
+
+<!--     attemp of getting score
+    <script>
+        var points_vic = document.querySelector("#points_vic");
+        points_vic.textContent = localStorage.getItem('points');
+    </script> -->
 
     <script src="/assets/js/game.js"></script>
 
