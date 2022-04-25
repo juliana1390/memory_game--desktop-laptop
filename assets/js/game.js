@@ -6,7 +6,7 @@
 
     var matches = 0;
 
-    var fail = 0;
+    var fails = 0;
 
     var imgMatchSign = document.querySelector("#imgMatchSign");
 
@@ -31,7 +31,7 @@
 
         matches = 0;
 
-        fail = 0;
+        fails = 0;
 
         var frontFaces = document.getElementsByClassName("front");
         var backFaces = document.getElementsByClassName("back");
@@ -170,30 +170,30 @@
             // emptying array
             flippedCards = [];
             
-            fail++;
-            getFails(fail);
+            fails++;
+            getFails(fails);
         }        
     }
-    /* ---------------------------------- COUNT POINTS ---------------------------------- */
+    /* ---------------------------------- COUNTING POINTS --------------------------------- */
     /** Function for counting the points
-        * @param {number} fail
+        * @param {number} fails
         * receive the number of fails
         * final score = 50 - (fails*2)
         * Never under 50
         */
     function getFails(){        
-        var ptsant = document.getElementById("points").textContent;
-        ptsant = parseInt(ptsant);
+        var initial_points = document.getElementById("points").textContent;
+        initial_points = parseInt(initial_points);
 
-        if(ptsant > 50){
-            pts = ptsant - 1; // - 1 point per fail
+        if(initial_points > 50){
+            pts = initial_points - 1; // - 1 point per fail
             document.getElementById("points").innerHTML =  pts;
         }
     }
     function getMatches(){        
-        var ptsant = document.getElementById("points").textContent;
-        ptsant = parseInt(ptsant);
-        pts = ptsant + 6; // more 6 points per match
+        var initial_points = document.getElementById("points").textContent;
+        initial_points = parseInt(initial_points);
+        pts = initial_points + 6; // more 6 points per match
         document.getElementById("points").innerHTML =  pts;
     }
     /* ------------------------------------ MATCH check ------------------------------------ */
@@ -232,10 +232,9 @@
     },3000);
     /* --------------------------------- call VICTORY page --------------------------------- */
     function victory(){
-        window.location.replace("victory.html");
-        
-        // attempt of pushing points to victory page
-        // var points = document.querySelector("#points").value;
-        // localStorage.setItem("points", points);
+        let points = document.querySelector("#points").innerHTML;
+        sessionStorage.setItem("points", points);
+
+        window.location.replace("victory.html");  
     }
 }());

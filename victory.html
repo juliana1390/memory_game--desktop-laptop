@@ -23,7 +23,8 @@
     
     <div>
         <div id="box-pts">
-            <p class="points_vic"></p>
+            <p id="scr">Score:</p>
+            <p id="points_vic"></p>
         </div>
     </div>
 
@@ -40,11 +41,11 @@
         </a>
     </div>
 
-<!--     attemp of getting score
+    <!----------------------------- get final score from game page ----------------------------->
     <script>
-        var points_vic = document.querySelector("#points_vic");
-        points_vic.textContent = localStorage.getItem('points');
-    </script> -->
+        let points_vic = sessionStorage.getItem("points");
+        document.querySelector("#points_vic").innerHTML = points_vic;
+    </script>
 
     <script src="/assets/js/game.js"></script>
 

@@ -110,10 +110,11 @@
 #trophy{
     margin-left: -10%;
 }
-/* score title */
-#scr{
-    padding: 5%;
+/* points number */
+#points_vic{
     font-family: "ZCOOL KuaiLe";
-    font-size: 2vw;
+    font-size: 3vw;
+    font-weight: 700;
+    padding: 1%;
     color: yellowgreen;
 }
